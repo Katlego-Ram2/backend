@@ -3,34 +3,34 @@ const express = require("express");
 const cors = require("cors");
 const bcrypt = require("bcrypt");
 
-const pool = require("./db");
+const pool = require("./db.js");
 
-const AuthRoutes = require("./Auth");
-const adminRoutes = require('./routes/admin');
-const aaRouter = require("./routes/aa");
-const resourcesRouter = require("./routes/resources");
-const moduleRoutes = require("./routes/moduleRoutes");
-const adminAuthRoutes = require("./routes/adminAuth");
-const studentRoutes = require("./routes/student");
+const AuthRoutes = require("./Auth.js");
+const adminRoutes = require('./routes/admin.js');
+const aaRouter = require("./routes/aa.js");
+const resourcesRouter = require("./routes/resources.js");
+const moduleRoutes = require("./routes/moduleRoutes.js");
+const adminAuthRoutes = require("./routes/adminAuth.js");
+const studentRoutes = require("./routes/student.js");
 // const staticsRoutes = require("./routes/stats"); // path to statics.js
-const userRoutes = require("./routes/user");
-const studentLoginRoutes = require("./routes/login"); // ✅ Register student login
-const admRoutes = require('./routes/adm'); // or './routes/adm' if you rename the file
-const adminAuth = require('./routes/adminAuth');
+const userRoutes = require("./routes/user.js");
+const studentLoginRoutes = require("./routes/login.js"); // ✅ Register student login
+const admRoutes = require('./routes/adm.js'); // or './routes/adm' if you rename the file
+const adminAuth = require('./routes/adminAuth.js');
 // In your Express main server file (e.g., app.js or server.js)
-const assignmentsRouter = require('./routes/assignments');
-const calendarRoutes = require("./routes/calendar");
-const asDisplayAssignmentsRouter = require("./routes/asDisplayAssignments");
-const statsRoutes = require("./routes/stats");
-const submitAssignment = require("./routes/submitAssignment");
-const reportsRoutes = require("./routes/reports");
-const submissionsRoutes = require("./routes/submissions");
-const quizRoutes = require("./routes/quiz");
-const quizSubmitRoutes = require("./routes/quizSubmit");
+const assignmentsRouter = require('./routes/assignments.js');
+const calendarRoutes = require("./routes/calendar.js");
+const asDisplayAssignmentsRouter = require("./routes/asDisplayAssignments.js");
+const statsRoutes = require("./routes/stats.js");
+const submitAssignment = require("./routes/submitAssignment.js");
+const reportsRoutes = require("./routes/reports.js");
+const submissionsRoutes = require("./routes/submissions.js");
+const quizRoutes = require("./routes/quiz.js");
+const quizSubmitRoutes = require("./routes/quizSubmit.js");
 const quizSubmissionsRoutes = require("./routes/quizSubmissions.js");
-const adminReportsRouter = require("./routes/adminReports");
-const usersRoutes = require('./routes/usersRoutes');
-const fixedQuizRoutes = require("./routes/fixedQuizRoutes");
+const adminReportsRouter = require("./routes/adminReports.js");
+const usersRoutes = require('./routes/usersRoutes.js');
+const fixedQuizRoutes = require("./routes/fixedQuizRoutes.js");
 
 
 
@@ -73,7 +73,7 @@ app.use("/api/fixed-quiz", fixedQuizRoutes);
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 
-app.use("/api/assignments", require("./routes/asUploadAssignments"));
+app.use("/api/assignments", require("./routes/asUploadAssignments.js"));
 // Server startup
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
