@@ -31,6 +31,8 @@ const quizSubmissionsRoutes = require("./routes/quizSubmissions.js");
 const adminReportsRouter = require("./routes/adminReports.js");
 const usersRoutes = require('./routes/usersRoutes.js');
 const fixedQuizRoutes = require("./routes/fixedQuizRoutes.js");
+const payRoutes = require("./routes/pay.js");
+
 
 
 
@@ -70,6 +72,8 @@ app.use("/api/quizzes", quizSubmissionsRoutes);
 app.use("/api/admin", adminReportsRouter);
 app.use('/api', usersRoutes);
 app.use("/api/fixed-quiz", fixedQuizRoutes);
+app.use("/api/paypal", payRoutes);
+
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 
