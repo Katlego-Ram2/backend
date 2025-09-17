@@ -32,6 +32,8 @@ const adminReportsRouter = require("./routes/adminReports.js");
 const usersRoutes = require('./routes/usersRoutes.js');
 const fixedQuizRoutes = require("./routes/fixedQuizRoutes.js");
 const payRoutes = require("./routes/pay.js");
+const notifyRoutes = require("./routes/notify.js");
+
 
 
 
@@ -73,6 +75,7 @@ app.use("/api/admin", adminReportsRouter);
 app.use('/api', usersRoutes);
 app.use("/api/fixed-quiz", fixedQuizRoutes);
 app.use("/api/paypal", payRoutes);
+app.use("/api/notify", notifyRoutes);
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
